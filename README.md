@@ -27,9 +27,12 @@ blackf8 contains several main exploits, known as modules:
 - USBInterface (ml.coresdev.blackf8.blackf8_iusb) 
 - CLBMode (ml.coresdev.blackf8.blackf8_clbexploit)
 
+### Where is the soruce code for those?
+Currently unavaliable, will be released once I figure out how to create symbolic links in Git.
+
 ## Requirements
-Any windows 10 version
-NT Kernel version 10.0 or above
-Secure boot **disabled** (unless you know how to sign EFI stuff)
-Antivirus should be disabled for installation of exploits, but can be re-enabled afterwards
-UEFI Boot scheme (for UEFIhack and kernel modifications)
+- Any windows 10 version
+- NT Kernel version 10.0 or above
+- Secure boot **disabled** (unless you know how to sign EFI stuff)
+- Antivirus should be disabled for installation of exploits, but can be re-enabled afterwards
+- UEFI Boot scheme (for UEFIhack and kernel modifications)
