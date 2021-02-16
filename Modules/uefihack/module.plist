@@ -1,0 +1,4 @@
+[Module]
+RunAt=Install
+ReRunAt=ReInstall
+Silent=module.bat
