@@ -197,18 +197,12 @@ int main()
     cout << "[*] Please save all of your work and close all other programs. This will allow the exploit to modify system files as needed." << endl;
     cout << "[-] Once you have done this, press enter" << endl;
     cin.ignore();
-    cout << "[2] Copy blackf8 files" << endl;
-    cout << "[*] All files copied." << endl;
-    cout << "[3] Run the exploit" << endl;
-    cout << "[-] Enabling CLB mode" << endl;
-    cout << "[*] Restarting in 5...\r";
-    Sleep(1000);
-    cout << "[*] Restarting in 4...\r";
-    Sleep(1000);
-    cout << "[*] Restarting in 3...\r";
-    Sleep(1000);
-    cout << "[*] Restarting in 2...\r";
-    Sleep(1000);
-    cout << "[*] Restarting in 1...\r";
-    Sleep(1000);
+    cout << "[2] Start UEFI exploit" << endl;
+    cout << "[*] Please install blackf8_uefi by following the insturctions provided in the window." << endl;
+    cout << "[*] Once finished, simply close the window." << endl;
+    STARTUPINFO si = { sizeof(STARTUPINFO) };
+    PROCESS_INFORMATION pi;
+    CreateProcess(L".\\Modules\\blackf8_uefi\\setup.exe", NULL, 0, 0, 0, 0, 0, 0, &si, &pi);
+    WaitForSingleObject(pi.hProcess, INFINITE);
+    cout << "[*] blackf8_uefi installer closed. Prepping device for entry into DKU/CLB mode" << endl;
 }
