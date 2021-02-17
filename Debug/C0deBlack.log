@@ -24,20 +24,20 @@ C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.2
           [
               _Iter=const wchar_t *
           ]
-C:\Users\tyler\source\repos\C0deBlack\C0deBlack\C0deBlack.cpp(146): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_const_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+C:\Users\tyler\source\repos\C0deBlack\C0deBlack\C0deBlack.cpp(147): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_const_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_const_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-C:\Users\tyler\source\repos\C0deBlack\C0deBlack\C0deBlack.cpp(146): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_const_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+C:\Users\tyler\source\repos\C0deBlack\C0deBlack\C0deBlack.cpp(147): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_const_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
           with
           [
               _Elem=wchar_t,
               _Iter=std::_String_const_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
               _Alloc=std::allocator<char>
           ]
-C:\Users\tyler\source\repos\C0deBlack\C0deBlack\C0deBlack.cpp(54): warning C4715: 'blackf8scan::IsUEFIMachine': not all control paths return a value
-C:\Users\tyler\source\repos\C0deBlack\C0deBlack\C0deBlack.cpp(71): warning C4715: 'blackf8scan::CLBModeFunctional': not all control paths return a value
+C:\Users\tyler\source\repos\C0deBlack\C0deBlack\C0deBlack.cpp(55): warning C4715: 'blackf8scan::IsUEFIMachine': not all control paths return a value
+C:\Users\tyler\source\repos\C0deBlack\C0deBlack\C0deBlack.cpp(72): warning C4715: 'blackf8scan::CLBModeFunctional': not all control paths return a value
   C0deBlack.vcxproj -> C:\Users\tyler\source\repos\C0deBlack\Debug\C0deBlack.exe

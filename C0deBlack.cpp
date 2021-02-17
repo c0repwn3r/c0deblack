@@ -22,6 +22,7 @@
 #include "Colors.h"
 #include "WinReg.hpp"
 #include <limits>
+#include <filesystem>
 
 using namespace std;
 
@@ -90,28 +91,28 @@ namespace blackf8scan {
 
 int main()
 {
-
     // Banner (but colored because it isnt in code)
-    cout << BOLDBLUE << "                       .oodMMMMMMMMMMMMM" << endl;
+    cout << "                       .oodMMMMMMMMMMMMM" << endl;
     cout << "           ..oodMMM  MMMMMMMMMMMMMMMMMMM" << endl;
     cout << "     oodMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM" << endl;
     cout << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM" << endl;
     cout << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM" << endl;
     cout << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM" << endl;
-    cout << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM   " << RESET << "**************************************" << endl;
-    cout << BOLDBLUE << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM   " << RESET << "*       The C0deblack Project        *" << endl;
-    cout << BOLDBLUE << "                                           " << RESET << "*    Made with <3 by coredoescode    *" << endl;
-    cout << "     " << BOLDRED << "MMMMMMMMMMMMMM  " << BOLDBLUE << "MMMMMMMMMMMMMMMMMMM   " << RESET << "*  Pioneering windows customization  *" << endl;
-    cout << "     " << BOLDRED << "MMMMMMMMMMMMMM  " << BOLDBLUE << "MMMMMMMMMMMMMMMMMMM   " << RESET << "**************************************" << endl;
-    cout << "     " << BOLDRED << "MMMMMMMMMMMMMM  " << BOLDBLUE << "MMMMMMMMMMMMMMMMMMM" << endl;
-    cout << "     " << RED << "MMMMMMMMMMMMMM  " << BOLDBLUE << "MMMMMMMMMMMMMMMMMMM" << endl;
-    cout << "     " << RED << "MMMMMMMMMMMMMM  " << BOLDBLUE << "MMMMMMMMMMMMMMMMMMM" << endl;
-    cout << "     " << RED << "`^^^^^^MMMMMMM  " << BOLDBLUE << "MMMMMMMMMMMMMMMMMMM" << endl;
-    cout << "           " << RED << "````^^^^  " << BOLDBLUE << "^^MMMMMMMMMMMMMMMMM" << endl;
-    cout << "                          " << BOLDBLUE << "````^^^^^^MMMM" << RESET << endl;
+    cout << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM   **************************************" << endl;
+    cout << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM   *       The C0deblack Project        *" << endl;
+    cout << "                                           *    Made with <3 by coredoescode    *" << endl;
+    cout << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM   *  Pioneering windows customization  *" << endl;
+    cout << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM   **************************************" << endl;
+    cout << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM" << endl;
+    cout << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM" << endl;
+    cout << "     MMMMMMMMMMMMMM  MMMMMMMMMMMMMMMMMMM" << endl;
+    cout << "     `^^^^^^MMMMMMM  MMMMMMMMMMMMMMMMMMM" << endl;
+    cout << "           ````^^^^  ^^MMMMMMMMMMMMMMMMM" << endl;
+    cout << "                          ````^^^^^^MMMM" << endl;
     // Now that we are done with that absolute mess of code, lets get to the actual interface
-    cout << RESET << endl;
+    cout << endl;
     cout << "Welcome to C0deblack!" << endl;
+    cout << "Running in " << filesystem::current_path();
     cout << "Please wait, scanning your device" << endl;
     cout << "[1/5] Scanning version information";
     winreg::RegKey CurrentVersion{ HKEY_LOCAL_MACHINE, L"SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion" };
@@ -204,5 +205,43 @@ int main()
     PROCESS_INFORMATION pi;
     CreateProcess(L".\\Modules\\blackf8_uefi\\setup.exe", NULL, 0, 0, 0, 0, 0, 0, &si, &pi);
     WaitForSingleObject(pi.hProcess, INFINITE);
-    cout << "[*] blackf8_uefi installer closed. Prepping device for entry into DKU/CLB mode" << endl;
+    cout << "[*] blackf8_uefi installer closed. Prepping device for entry into DCL/CLB mode" << endl;
+    cout << "[*] Copying files" << endl;
+    cout << "[*] Setting flags for DCL mode" << endl;
+    cout << "[*] Opening HKLM register" << endl;
+    winreg::RegKey systemsetup{ HKEY_LOCAL_MACHINE, L"System\\Setup" };
+    winreg::RegKey policies{ HKEY_LOCAL_MACHINE, L"Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System" };
+    cout << "[*] Changing system setup information" << endl;
+    systemsetup.SetStringValue(L"CmdLine", L"cmd.exe /k C:\\blackf8\\stage4.bat");
+    systemsetup.SetDwordValue(L"SystemSetupInProgress", 1);
+    systemsetup.SetDwordValue(L"SetupType", 2);
+    cout << "[*] Changing policies" << endl;
+    policies.SetDwordValue(L"EnableCursorSuppression", 0);
+    policies.SetDwordValue(L"EnableLUA", 0);
+    policies.SetDwordValue(L"VerboseStatus", 1);
+    /*
+    systemsetup.SetStringValue(L"CmdLine", L"");
+    systemsetup.SetDwordValue(L"SystemSetupInProgress", 0);
+    systemsetup.SetDwordValue(L"SetupType", 0);
+    cout << "[*] Changing policies" << endl;
+    policies.SetDwordValue(L"EnableCursorSuppression", 1);
+    policies.SetDwordValue(L"EnableLUA", 1);
+    policies.SetDwordValue(L"VerboseStatus", 0);
+    */
+    cout << "[*] DCL mode is enabled, now we need to reboot" << endl;
+    cout << "[*] Time to hope this works - rebooting in 5..." << endl;
+    Sleep(1);
+    cout << "[*] Time to hope this works - rebooting in 4..." << endl;
+    Sleep(1);
+    cout << "[*] Time to hope this works - rebooting in 3..." << endl;
+    Sleep(1);
+    cout << "[*] Time to hope this works - rebooting in 2..." << endl;
+    Sleep(1);
+    cout << "[*] Time to hope this works - rebooting in 1..." << endl;
+    Sleep(1);
+    cout << "[*] Trying to reboot" << endl;
+    system("shutdown /f /r /t 0");
+    Sleep(1);
+    cout << "[*] Sent the reboot command, why are we still here?!" << endl;
+    cin.ignore();
 }
