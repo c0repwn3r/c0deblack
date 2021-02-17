@@ -26,6 +26,7 @@ blackf8 contains several main exploits, known as modules:
 - Blackout (ml.coresdev.blackf8.blackf8_blackout) \* ^
 - USBInterface (ml.coresdev.blackf8.blackf8_iusb) 
 - CLBMode (ml.coresdev.blackf8.blackf8_clbexploit)
+- uefiboot (ml.coresdev.blackf8.blackf8_uefiboot)
 
 ### Where is the soruce code for those?
 Currently unavaliable, will be released once I figure out how to create symbolic links in Git.
