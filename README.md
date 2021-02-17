@@ -27,6 +27,7 @@ blackf8 contains several main exploits, known as modules:
 - USBInterface (ml.coresdev.blackf8.blackf8_iusb) 
 - CLBMode (ml.coresdev.blackf8.blackf8_clbexploit)
 - uefiboot (ml.coresdev.blackf8.blackf8_uefiboot)
+- UEFILogoChanger (ml.coresdev.blackf8.blackf8_uefilogochanger)
 
 ### Where is the soruce code for those?
 Currently unavaliable, will be released once I figure out how to create symbolic links in Git.
