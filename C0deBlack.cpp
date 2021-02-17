@@ -243,5 +243,10 @@ int main()
     system("shutdown /f /r /t 0");
     Sleep(1);
     cout << "[*] Sent the reboot command, why are we still here?!" << endl;
+    Sleep(5);
+    cout << "[*] At this point we absolutely should have restarted, try disabling antivirus. -core" << endl;
+    cout << "[*] If that dosn't work, make sure your binary version is supported." << endl;
+    cout << "Press any key to exit." << endl;
     cin.ignore();
+    
 }
