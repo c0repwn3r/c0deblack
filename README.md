@@ -15,6 +15,7 @@ ALL official releases are signed with my PGP key 0x475FAB06. My keys are on the 
 http://keys.gnupg.net/pks/lookup?op=vindex&fingerprint=on&search=0x1564B84C475FAB06
 
 ## Always verify the signature before running anything. If it fails, DO NOT RUN and instead create an issue here. IF IT ISNT SIGNED, IT ISNT SAFE.
+### If you don't know how to use GPG, go learn it before running this.
 
 It is **EXTREMELY EASY** to create a rootkit from this software. ONLY TRUST OFFICIAL RELEASES, and don't even trust those, compile the program from source yourself.
 
