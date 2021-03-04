@@ -51,6 +51,8 @@ Currently unavaliable, will be released once I figure out how to create symbolic
 ## Is this safe?
 To all of my tests, this exploit is completley safe. However, this is a kernel modification tool. We are putting custom, unsigned code into the Windows kernel.
 
-Also, even this document is signed: README.mg.sig
+Also, even this document is signed. Signature in README.md.sig
+
 **trust nobody**
+
 - core
