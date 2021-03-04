@@ -1,0 +1,9 @@
++---------------------------+
+|    c0deblack build tool   |
+|       Target: ckrlbk      |
+|        Build: full        |
+|       Signed: true        |
+|      Config: default      |
++---------------------------+
+[INFO/BuildTool:MAIN] Build started
+[INFO/BuildTool:DOWNLOAD_RESOURCES] Downloading ckrlbk from https://cdn.coresdev.ml/ckrlbk/latest.7z
