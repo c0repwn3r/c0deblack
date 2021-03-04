@@ -1,12 +1,19 @@
 # c0deblack
 Windows exploit toolkit. Under construction.
 
+# READ THIS ENTIRE DOCUMENT BEFORE INSTALLING.
+
 ## What is blackf8/c0deblack
 Blackf8 is not an exploit. It is several. blackf8 is the core exploitation kit behind the c0deblack customization tool.
 
 ## Warning
-Do **NOT** download blackf8 or c0deblack from **ANY** websiite or repository other then the two official ones located at:
+Do **NOT** download blackf8 or c0deblack from **ANY** websiite or repository other then the official ones located at:
 - https://github.com/coredoescode/c0deblack
+- https://coresdev.ml/projects/c0deblack
+
+ALL official releases are signed with my PGP key 0x475FAB06. My keys are on the MIT keyservers.
+
+## Always verify the signature before running anything. If it fails, DO NOT RUN and instead create an issue here. IF IT ISNT SIGNED, IT ISNT SAFE.
 
 It is **EXTREMELY EASY** to create a rootkit from this software. ONLY TRUST OFFICIAL RELEASES, and don't even trust those, compile the program from source yourself.
 
@@ -38,3 +45,6 @@ Currently unavaliable, will be released once I figure out how to create symbolic
 - Secure boot **disabled** (unless you know how to sign EFI stuff)
 - Antivirus should be disabled for installation of exploits, but can be re-enabled afterwards
 - UEFI Boot scheme (for UEFIhack and kernel modifications)
+
+## Is this safe?
+To all of my tests, this exploit is completley safe. However, this is a kernel modification tool. We are putting custom, unsigned code into the Windows kernel.
