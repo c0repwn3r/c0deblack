@@ -11,7 +11,8 @@ Do **NOT** download blackf8 or c0deblack from **ANY** websiite or repository oth
 - https://github.com/coredoescode/c0deblack
 - https://coresdev.ml/projects/c0deblack
 
-ALL official releases are signed with my PGP key 0x475FAB06. My keys are on the MIT keyservers.
+ALL official releases are signed with my PGP key 0x475FAB06. My keys are on the GnuPG keyservers:
+http://keys.gnupg.net/pks/lookup?op=vindex&fingerprint=on&search=0x1564B84C475FAB06
 
 ## Always verify the signature before running anything. If it fails, DO NOT RUN and instead create an issue here. IF IT ISNT SIGNED, IT ISNT SAFE.
 
