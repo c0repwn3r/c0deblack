@@ -25,3 +25,7 @@
 [INFO/BuildTool:BUILD] Building target ckrlbk
 [INFO/BuildTool:TEST] Using bundled compiler
 [INFO/BuildTool:BUILD] Build started
+[INFO/BuildTool:BUILD] Build completed in 0:49:13
+[INFO/BuildTool:BUILD] Building target pkg
+[INFO/BuildTool:ZIP] Zipping files
+[INFO/BuildTool] All targets finished
