@@ -51,27 +51,7 @@ Currently unavaliable, will be released once I figure out how to create symbolic
 ## Is this safe?
 To all of my tests, this exploit is completley safe. However, this is a kernel modification tool. We are putting custom, unsigned code into the Windows kernel.
 
-Make a backup of your kernel before running, and all of your data for that matter. It is highly recommended you use `ckrlbk-recovery` as described below.
-
-## Creating a ckrlbk recovery disk
-You should do this. It is not required, however if anything screws up, this is a tool which will allow you to revert the changes without a reinstall.
-
-The tool source is included in this repository. Run:
-
-```
-buildtool\ckrlbk\build
-```
-
-A full, successful build log can be found in ckrlbk-success.txt.
-Next, plug in an empty 8gb+ USB drive and type:
-
-```
-tools\ckrlbk --create-recovery-drive --usb --recovery-from=c0deblack_all --ckrlbk-config=c0deblack.rmf --rmf-signed=true --rmf-signature=c0deblack.rmf.sig --key=gnupg-0x1564B84C475FAB06
-```
-
-Again, full logs can be found in ckrlbk-build.txt. If they don't match, rerun the build.
-
-To use this recovery tool, just boot to the USB drive. It will revert your computer to the backup that UEFIHack automatically created.
+Make a backup of your kernel before running, and all of your data for that matter.
 
 \-\=\-\=\-\=\-\=\-\=\-\=\-
 
