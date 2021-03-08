@@ -7,3 +7,21 @@
 +---------------------------+
 [INFO/BuildTool:MAIN] Build started
 [INFO/BuildTool:DOWNLOAD_RESOURCES] Downloading ckrlbk from https://cdn.coresdev.ml/ckrlbk/latest.7z
+[INFO/BuildTool:DOWNLOAD_STATUS] Downloaded https://cdn.coresdev.ml/ckrlbk/latest.7z
+[INFO/BuildTool:SECURE_KEY_MANAGER] Verifying signature
+[INFO/SecureKeyManager:GrabKey] Importing key 0x1564b84c475fab06
+[INFO/SecureKeyManager:ImportKey] gpg --recv-keys 0x1564b84c475fab06
+[INFO/SecureKeyManager:KeyInfo] Key information:
+[INFO/SecureKeyManager:KeyInfo] Tyler Donia (My website is https://coresdev.ml) <coredoescode@gmail.com)
+[INFO/SecureKeyManager:KeyInfo] Fingerprint=8B89 69A0 D06B A4F1 42DB  EB9A 1564 B84C 475F AB06
+[INFO/SecureKeyManager:VerifySignature] Signature checking latest.7z
+[INFO/SecureKeyManager:DownloadSignature] latest.7z is associated with the signature located at https://cdn.coresdev.ml/ckrlbk/latest.7z.sig
+[INFO/SecureKeyManager:DownloadSignature] Downloaded signature
+[INFO/SecureKeyManager:VerifySignature] gpg --verify latest.7z.sig latest.7z
+[INFO/SecureKeyManager:VerifySignature] Signature matches, proceeding with build
+[INFO/BuildTool:EXTRACT_SOURCES] Extracting latest.7z
+[INFO/BuildTool:RUNCMD] 7z-extract latest.7z ckrlbk
+[INFO/7-zip:ACTION_EXTRACT] Extracted latest.7z to ./ckrlbk
+[INFO/BuildTool:BUILD] Building target ckrlbk
+[INFO/BuildTool:TEST] Using bundled compiler
+[INFO/BuildTool:BUILD] Build started
